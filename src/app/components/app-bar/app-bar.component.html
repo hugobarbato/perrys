@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span class="brand" [routerLink]="'/'"><img src="/assets/images/logo.png"> </span>
+        <span class="spacer"></span>
+        <!-- <mat-icon class="icon clickable" aria-hidden="false" aria-label="Favoritos">favorite</mat-icon> -->
+      
+        <mat-icon class="icon clickable badge" [matBadgeHidden]="service.store?.cartLength==0" [routerLink]="'/carrinho'"
+        [matBadge]="service.store?.cartLength" matBadgeColor="warn" matBadgePosition="below" matBadgeSize="small"
+        aria-hidden="false" aria-label="Carrinho">shopping_cart</mat-icon>
+        <span class="totalCart" [routerLink]="'/carrinho'"> {{service.getTotalPriceCart() | currency:'BRL'  }} </span>
+         
+    </mat-toolbar-row>
+</mat-toolbar>

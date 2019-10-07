@@ -1,0 +1,3 @@
+<div class="products-list">
+    <product-card *ngFor="let product of service.store?.products" [product]="product" (addCart)="addCart($event)"></product-card>
+</div>

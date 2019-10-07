@@ -1,0 +1,17 @@
+
+<mat-card class="product-card" >
+    <div class="product-card-img">
+      <img [src]="c.product.picture" alt="Foto do Produto" [routerLink]="['/product/'+c.product.id]">
+    </div>
+    <mat-card-content class="product-card-title" >
+      <h1 [routerLink]="['/c.product/'+c.product.id]">{{c.product.title}}</h1>
+      <div class="subtitle-product">
+        <span class="price-product" [routerLink]="['/product/'+c.product.id]"> {{ ( c.product.price * c.quantity ) | currency:'BRL' }}  </span>
+        <div class="actions">
+            <button mat-raised-button (click)="decrementCart.emit(c.product)"> <mat-icon>remove_circle_outline</mat-icon> </button>
+            <div class="cart-total"> {{ c.quantity }} </div>
+            <button mat-raised-button (click)="addCart.emit(c.product)"> <mat-icon>add_circle_outline</mat-icon> </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>

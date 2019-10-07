@@ -1,0 +1,16 @@
+
+<mat-card class="product-card" >
+    <div class="product-card-img">
+      <img [src]="product.picture" alt="Foto do Produto" [routerLink]="['/product/'+product.id]">
+    </div>
+    <mat-card-content class="product-card-title" >
+      <h1 [routerLink]="['/product/'+product.id]">{{product.title}}</h1>
+      <div class="subtitle-product">
+        <span class="price-product" [routerLink]="['/product/'+product.id]"> {{product.price | currency:'BRL' }}  </span>
+        <div class="actions">
+            <button mat-raised-button color="primary" *ngIf="product.quantity==0" > <mat-icon>error_outline</mat-icon> </button>
+            <button mat-raised-button color="primary" (click)="addCart.emit(product)" *ngIf="product.quantity"> <mat-icon>add_shopping_cart</mat-icon> COMPRAR </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>

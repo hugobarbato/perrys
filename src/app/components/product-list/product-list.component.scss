@@ -1,0 +1,19 @@
+.products-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 5%;
+    product-card{
+        padding: 10px;
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+@media screen and (max-width:900px){
+    .products-list{ 
+        padding: 10px;
+        product-card{
+            padding: 10px;
+            flex: 0 0 calc(100% - 20px);
+        }
+    }
+}

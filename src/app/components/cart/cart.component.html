@@ -1,0 +1,15 @@
+<div class="cart-list">
+    <h1>Seu Carrinho</h1>
+    <ul>
+        <li>Total de Itens: {{service.store?.cartLength}};</li>
+        <li>Valor total: {{ service.getTotalPriceCart() | currency:'BRL' }};</li>
+    </ul> 
+    <div class="list">
+        <cart-card [c]="c" *ngFor=" let c of service.store?.cart " (addCart)="addCart($event)" (decrementCart)="decrementCart($event)" ></cart-card>
+    </div>
+    <button mat-raised-button color="warn" (click)="clearCart()" *ngIf="service.store?.cartLength" class="clear-button" >
+        <mat-icon>remove_shopping_cart</mat-icon> Limpar Carrinho 
+    </button>
+    <h5 *ngIf="!service.store?.cartLength">Você não possui itens em seu carrinho.</h5>
+    
+</div>

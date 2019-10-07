@@ -1,0 +1,21 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.icon {
+    padding: 0 14px;
+}
+.icon.badge{
+    padding-right: 0;
+}
+.totalCart {
+    margin-left: 10px;
+}
+.brand{
+    display: flex;
+    img{
+        height: 30px;
+    }
+}
+.clickable{
+    cursor: pointer;
+}

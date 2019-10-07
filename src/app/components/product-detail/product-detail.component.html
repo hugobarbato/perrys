@@ -1,0 +1,33 @@
+
+<div class="detail-product" *ngIf="product">
+    <div class="titles">
+        <div class="img-product">
+            <img [src]="product.picture" alt="Foto do Produto">
+            <small> #{{product.id}} </small> 
+        </div>
+        <div class="title-product">
+            <h1> {{product.title}} </h1>
+            <h2>{{product.price | currency:'BRL'}}</h2>
+        </div>
+    </div>
+    <div class="details">
+        <p >
+            {{product.description  }}
+        </p>
+        <div class="info">
+            <ul>
+                <li><b>Tipo do Chip:</b> {{ product.chipType }} </li>
+                <li><b>Memória:</b> {{ product.memory }} </li>
+                <li><b>Quantidade Disponível:</b> {{ product.quantity }} </li>
+            </ul> 
+            <img [src]="'/assets/images/'+product.brand+'.png'" alt="" height="40">
+        </div>
+        <div class="actions">
+            <h5>Quantidade em seu carrinho:</h5>
+            <button mat-raised-button (click)="decrementCart()"> <mat-icon>remove_circle_outline</mat-icon> </button>
+            <div class="cart-total"> {{ service.getCartQuantity(product) }} </div>
+            <button mat-raised-button (click)="addCart()"> <mat-icon>add_circle_outline</mat-icon> </button>
+        </div>
+    </div>
+
+</div>
