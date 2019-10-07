@@ -8,7 +8,7 @@
       <div class="subtitle-product">
         <span class="price-product" [routerLink]="['/product/'+product.id]"> {{product.price | currency:'BRL' }}  </span>
         <div class="actions">
-            <button mat-raised-button color="primary" *ngIf="product.quantity==0" > <mat-icon>error_outline</mat-icon> </button>
+            <button mat-raised-button color="primary" *ngIf="product.quantity==0" > <mat-icon>error_outline</mat-icon> Esgotado </button>
             <button mat-raised-button color="primary" (click)="addCart.emit(product)" *ngIf="product.quantity"> <mat-icon>add_shopping_cart</mat-icon> COMPRAR </button>
         </div>
       </div>

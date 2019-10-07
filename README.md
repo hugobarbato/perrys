@@ -1,27 +1,15 @@
 # DesafioJust
+Bem vindo a resolução do desafio de contratação para vaga de Desenvolvedor WEB Front-END com a JUST. 
+ 
+## Este projeto foi desenvolvido utilizando:
+-  Angular - [https://angular.io/](https://angular.io/)
+- Angular Material - [https://material.angular.io/](https://material.angular.io/)
+- NgRx - [https://ngrx.io/](https://ngrx.io/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+## Rodando a aplicação
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para rodar a aplicação em sua maquina certifique-se de possuir a versão mais recente do [Node.js](https://nodejs.org/en/) e siga os seguintes passos:
+1. Clone o repositório em um diretório de sua preferencia com o seguinte comando `git clone https://github.com/hugobr02/perrys.git`
+2. Entre na pasta, e instale as dependência rodando `npm install`
+3. Rode a aplicação com o comando: `npm start`. 
+4. Depois acesse `http://localhost:4200/`. 

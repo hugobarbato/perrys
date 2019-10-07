@@ -47,9 +47,11 @@ export class StoreService implements OnDestroy {
 
   getTotalPriceCart(){
     let total = 0;
-    this.store.cart.forEach(item=>{
-      total += (item.quantity * item.product.price);
-    });
+    if(this.store){
+      this.store.cart.forEach(item=>{
+        total += (item.quantity * item.product.price);
+      });
+    }
     return total;
   }
 

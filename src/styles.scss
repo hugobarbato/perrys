@@ -5,7 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .product-card {
-    display:flex;
+    display:flex !important;
     height: 180px;
     justify-content: center;
     align-items: center;
