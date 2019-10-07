@@ -20,10 +20,13 @@ export class ProductDetailComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    // recebe id da rota
     this.id = this.route.snapshot.paramMap.get('id');
+    // busca no array de produtos 
     this.getProduct();
   }
   getProduct(){
+    // aguarda enquanto o serviço é inicializado para buscar informações do produto
     if(this.service && this.service.store){
       let filtered = this.service.store.products.filter(product=>{
         if(product.id == this.id){
@@ -35,6 +38,7 @@ export class ProductDetailComponent implements OnInit {
       setTimeout(()=>{this.getProduct();},100); 
     }
   }
+  // dispara eventos para o reducers
   addCart(){
     this.service.redux.dispatch(Add(this.product));
   }

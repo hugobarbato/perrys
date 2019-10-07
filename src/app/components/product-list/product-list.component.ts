@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
   constructor( private service:StoreService ) { }
 
   ngOnInit() { }
-
+  // dispara evento para o reducers
   addCart(product:ProductModel){
     this.service.redux.dispatch(Add(product));
   }

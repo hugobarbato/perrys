@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
   ngOnInit() {
   }
   
+  // dispara eventos para o reducers
   addCart(product:any){
     this.service.redux.dispatch(Add(product));
   }
